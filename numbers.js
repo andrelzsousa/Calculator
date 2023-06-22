@@ -1,9 +1,11 @@
 const numbers = document.querySelectorAll('[data-number]')
 
 Array.from(numbers).forEach((element) => {
-    element.addEventListener('click', () => {
-        console.log(element)
-        showDisplay(element.innerHTML)
-        console.log(parseInt(display.innerHTML))
+    element.addEventListener('click', (e) => {
+        if (newOperatorKey) {
+            cleanDisplay()
+            newOperatorKey = false
+        }
+        appendDisplay(element.innerHTML)
     })
 })
