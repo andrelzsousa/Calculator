@@ -9,6 +9,10 @@ body {
 .calculator {
     border: 1px solid black;
     padding: 1em;
+    width: 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .calculator__body {
@@ -21,6 +25,8 @@ body {
     margin-bottom: 1em;
     border: 1px solid black;
     height: 1em;
+    text-align: right;
+    align-self: stretch;
 }
 
 .calculator__buttons {
@@ -45,6 +51,12 @@ body {
     cursor: pointer;
 }
 
+.list__line p,
+.operations__list li {
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
 .operations__list {
     display: flex;
     flex-direction: column;
@@ -59,4 +71,8 @@ body {
 
 .operations__list li:first-child {
     margin-top: 0.2em;
+}
+
+.zero {
+    flex-grow: 2;
 }
