@@ -31,8 +31,9 @@ function getOperator() {
 }
 
 function makeOperation(a, b, type) {
-    a = parseInt(a)
-    b = parseInt(b)
+
+    a = (a.includes(".")) ? parseFloat(a) : parseInt(a)
+    b = (b.includes(".")) ? parseFloat(b) : parseInt(b)
     console.log(a, b)
     console.log(type)
     switch (type) {
