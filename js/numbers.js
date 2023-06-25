@@ -11,6 +11,7 @@ Array.from(numbers).forEach((element) => {
             cleanDisplay()
             newOperatorKey = false
         }
-        appendDisplay(element.innerHTML)
+        if (getDisplay().length <= 9)
+            appendDisplay(element.innerHTML)
     })
 })
