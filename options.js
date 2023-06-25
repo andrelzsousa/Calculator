@@ -1,10 +1,11 @@
 const btnClean = document.querySelector('[data-clean]')
 btnClean.addEventListener('click', () => {
-    cleanDisplay()
+    setDisplay('0')
     newOperatorKey = false
     clickOp = 0
     firstOperator = 0
     secondOperator = 0
+    result = 0
 })
 
 const btnErase = document.querySelector('[data-erase]')

@@ -1,5 +1,6 @@
 const display = document.getElementById('display')
 
+setDisplay('0')
 
 function appendDisplay(value) {
     display.innerText += value

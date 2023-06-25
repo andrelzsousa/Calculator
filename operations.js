@@ -9,11 +9,11 @@ Array.from(operations).forEach((element) => {
     element.addEventListener('click', () => {
 
         if (clickOp == 0) {
-
-
             if (element.innerHTML == '=') {
-                result = makeOperation(result, secondOperator, opType)
-                setDisplay(result)
+                if (typeof (opType) != "undefined") {
+                    result = makeOperation(result, secondOperator, opType)
+                    setDisplay(result)
+                }
             }
             else {
                 firstOperator = getOperator()
@@ -27,15 +27,21 @@ Array.from(operations).forEach((element) => {
         else if (clickOp == 1) {
             secondOperator = getOperator()
 
-            result = makeOperation(firstOperator, secondOperator, opType)
-            setDisplay(result)
-
-            firstOperator = result
-
-            if (element.innerHTML == '=') {
-                clickOp = 0
+            if (opType != element.innerHTML && element.innerHTML != '=') {
+                clickOp = 1
+                opType = element.innerHTML
             }
-            newOperatorKey = true
+            else {
+                result = makeOperation(firstOperator, secondOperator, opType)
+                setDisplay(result)
+
+                firstOperator = result
+
+                if (element.innerHTML == '=') {
+                    clickOp = 0
+                }
+                newOperatorKey = true
+            }
         }
     })
 })
