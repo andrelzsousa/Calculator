@@ -6,7 +6,9 @@ let secondOperator
 let result
 
 Array.from(operations).forEach((element) => {
-    element.addEventListener('click', (e) => {
+    element.addEventListener('click', () => {
+
+
 
         if (clickOp == 0) {
             if (element.innerHTML == '=') {
@@ -15,16 +17,15 @@ Array.from(operations).forEach((element) => {
                     setDisplay(result)
                 }
             }
+
             else {
                 firstOperator = getOperator()
                 newOperatorKey = true
                 clickOp++
                 opType = element.getAttribute('value')
-                console.log(element)
             }
-
-
         }
+
         else if (clickOp == 1) {
             secondOperator = getOperator()
 

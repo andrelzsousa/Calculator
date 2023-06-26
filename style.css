@@ -67,11 +67,18 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .list__operacao {
     margin-bottom: 0.4em;
     margin: 0 0.2em 0.4em 0.2em;
     cursor: pointer;
     background-color: var(--orange);
+}
+
+.list__operacao_selection {
+    background-color: #fff;
+    color: var(--orange);
+    transition: 0.5s;
 }
 
 .list__operacao:first-child {
