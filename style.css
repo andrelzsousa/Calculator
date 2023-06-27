@@ -73,6 +73,7 @@ body {
     margin: 0 0.2em 0.4em 0.2em;
     cursor: pointer;
     background-color: var(--orange);
+    transition: 0.5s;
 }
 
 .list__operacao_selection {

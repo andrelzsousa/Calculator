@@ -4,11 +4,24 @@ let clickOp = 0
 let firstOperator
 let secondOperator
 let result
-
+let ant = 0
 Array.from(operations).forEach((element) => {
     element.addEventListener('click', () => {
 
 
+        if (ant == 0) {
+            ant = element
+        }
+
+        if (element.innerHTML != "=") {
+            element.classList.add('list__operacao_selection')
+        }
+
+        if (ant != element) {
+            ant.classList.remove('list__operacao_selection')
+        }
+
+        ant = element
 
         if (clickOp == 0) {
             if (element.innerHTML == '=') {
