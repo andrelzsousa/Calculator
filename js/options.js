@@ -6,6 +6,9 @@ btnClean.addEventListener('click', () => {
     firstOperator = 0
     secondOperator = 0
     result = 0
+    operations.forEach((element) => {
+        element.classList.remove('list__operacao_selection')
+    })
 })
 
 const btnErase = document.querySelector('[data-erase]')
