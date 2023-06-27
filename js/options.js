@@ -14,6 +14,9 @@ btnClean.addEventListener('click', () => {
 const btnErase = document.querySelector('[data-erase]')
 btnErase.addEventListener('click', () => {
     setDisplay(getDisplay().slice(0, getDisplay().length - 1))
+    if (getDisplay() == '') {
+        setDisplay('0')
+    }
 })
 
 const btnPercent = document.querySelector('[data-percent]')
