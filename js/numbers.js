@@ -11,7 +11,16 @@ Array.from(numbers).forEach((element) => {
             cleanDisplay()
             newOperatorKey = false
         }
-        if (getDisplay().length <= 9)
+        if (getDisplay().length <= 9 && !hasDot(element))
             appendDisplay(element.innerHTML)
     })
 })
+
+function hasDot(element) {
+    if (element.innerHTML != '.')
+        return false
+
+    if (getDisplay().includes('.') && element.innerHTML == '.') {
+        return true
+    }
+}
